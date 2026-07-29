@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инструкция по установке Python и VS Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo-container">
+            <a href="https://kodify.online" target="_blank">
+                <img src="photo.png" alt="Kodify Online Logo" class="header-logo">
+            </a>
+        </div>
+    </header>
+    <div class="main-layout">
+        <nav class="side-menu">
+            <h3>Навигация</h3>
+            <ul>
+                <li><a href="index.html">На главную</a></li>
+                <li><a href="#python-installation">Установка Python</a></li>
+                <li><a href="#vscode-installation">Установка VS Code</a></li>
+            </ul>
+        </nav>
+
+        <main class="content with-side-menu">
+            <div class="container">
+                <section id="python-installation">
+                    <h1>Инструкция по установке Python</h1>
+                    <p>Это руководство поможет вам установить последнюю стабильную версию <strong>Python 3</strong> на ваш компьютер. Мы выбираем Python 3, так как он необходим для работы с такими популярными библиотеками, как Tkinter, Pygame, MCPI Minecraft и MinecraftStuff. Следуйте шагам внимательно.</p>
+
+                    <div class="step">
+                        <h2 id="python-step-1">Шаг 1: Перейдите на официальный сайт Python</h2>
+                        <p>Откройте ваш браузер (Google Chrome, Firefox, Edge и т.д.) и перейдите на официальный сайт Python по ссылке: <a href="https://www.python.org" target="_blank">https://www.python.org</a></p>
+                        <img class="screenshot-img" src="Скриншот 28-07-2026 155137.jpg" alt="Главная страница сайта Python.org">
+                        <div class="alert info">
+                            в меню найдите пункт "Downloads".
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h2 id="python-step-2">Шаг 2: Скачайте установщик</h2>
+                        <p>На главной странице наведите курсор на меню "Downloads" (Загрузки). Должна появиться кнопка для скачивания последней версии Python для Windows. Нажмите на нее, чтобы начать скачивание.</p>
+                        <img class="screenshot-img" src="Скриншот 28-07-2026 160043.jpg" alt="Здесь должен быть скриншот">
+                        <div class="alert info">
+                            скриншот выпадающего меню "Downloads" с кнопкой для скачивания Python.
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h2 id="python-step-3">Шаг 3: Запустите установщик</h2>
+                        <p>После того, как файл скачается, найдите его в папке "Загрузки" вашего компьютера и дважды кликните по нему, чтобы запустить.</p>
+                         <div class="important">
+                            ВАЖНО! В самом первом окне установщика обязательно поставьте галочку внизу слева напротив "Add Python to PATH". Это очень важно для дальнейшей работы!
+                        </div>
+                        <div class="screenshot-flex-container">
+                            <img class="screenshot-img" src="Скриншот 28-07-2026 160504.jpg" alt="Окно установщика БЕЗ галочки 'Add Python to PATH'">
+                            <img class="screenshot-img" src="Скриншот 28-07-2026 160828.jpg" alt="Окно установщика С ВЫДЕЛЕННОЙ галочкой 'Add Python to PATH'">
+                        </div>
+                        <div class="alert info">
+                             два скриншота: первый — начальное окно установщика, второй — то же окно, но с поставленной галочкой "Add Python to PATH".
+                        </div>
+                        <div class="step">
+
+                            <p>После того как поставили галочку, нажмите "Install Now" (Установить сейчас).</p>
+                            <img class="screenshot-img" src="Скриншот 28-07-2026 164705.jpg" alt="Скриншот окна установщика Python после нажатия 'Install Now'">
+                        </div>
+                            
+                    </div>
+
+                    <div class="step">
+                        <h2 id="python-step-4">Шаг 4: Процесс установки</h2>
+                        <p>Установщик начнет копировать файлы. Просто дождитесь окончания процесса.</p>
+                        <img class="screenshot-img" src="Скриншот 28-07-2026 165137.jpg" alt="Здесь должен быть скриншот">
+                        <div class="alert info">
+                            скриншот окна с прогрессом установки.
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                         <h2 id="python-step-5">Шаг 5: Завершение установки</h2>
+                        <p>После успешной установки вы увидите окно с сообщением "Setup was successful". Нажмите "Close" (Закрыть).</p>
+                         <img class="screenshot-img" src="Скриншот 28-07-2026 170950.jpg" alt="Здесь должен быть скриншот">
+                        <div class="alert info">
+                           Здесь нужен скриншот финального окна установщика с сообщением об успешной установке.
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h2 id="python-step-6">Шаг 6: Проверка установки</h2>
+                        <p>Теперь давайте проверим, правильно ли установился Python. Для этого:</p>
+                        <ol>
+                            <li>Нажмите на меню "Пуск" или значок поиска на панели задач.</li>
+                            <li>Начните печатать <code>cmd</code> или "Командная строка" и откройте приложение.</li>
+                            <li>В появившемся черном окне введите команду <code>python --version</code> и нажмите Enter.</li>
+                        </ol>
+                        <p>Если вы видите что-то вроде <code>Python 3.x.x</code> (где x - цифры), значит все установлено правильно!</p>
+                        <img class="screenshot-img" src="Скриншот 28-07-2026 171140.jpg" alt="Здесь должен быть скриншот">
+                        <div class="alert info">
+                            скриншот командной строки с введенной командой <code style="color: green;">python --version</code> и успешным ответом, показывающим версию Python.
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <section id="vscode-installation">
+                    <h1>Инструкция по установке VS Code</h1>
+                    <p>Visual Studio Code (VS Code) — это мощный и популярный редактор кода, который мы будем использовать для написания программ на Python.</p>
+
+                    <div class="step">
+                        <h2>Шаг 1: Скачайте VS Code</h2>
+                        <p>Перейдите на официальный сайт Visual Studio Code по ссылке: <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>. Нажмите на большую синюю кнопку, чтобы скачать версию для Windows.</p>
+                        <img class="screenshot-img" src="Скриншот 28-07-2026 171532.jpg" alt="Здесь должен быть скриншот">
+                        <img class="screenshot-img" src="Скриншот 28-07-2026 172341.jpg" alt="Здесь должен быть скриншот">
+                        <div class="alert info">
+                            скриншот главной страницы сайта VS Code с выделенной кнопкой для скачивания и экран с выбором версии под ОС.
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h2>Шаг 2: Запустите установщик и примите соглашение</h2>
+                        <p>Запустите скачанный файл. В первом окне примите условия лицензионного соглашения и нажмите "Далее".</p>
+                        <img class="screenshot-img" src="photo_2026-07-28_17-57-47.jpg" alt="Здесь должен быть скриншот">
+                        <div class="alert info">
+                            Здесь нужен скриншот окна установщика с принятием лицензионного соглашения.
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h2>Шаг 3: Выбор дополнительных задач</h2>
+                        <p>В окне "Выбор дополнительных задач" рекомендуется отметить следующие пункты для удобства работы:</p>
+                        <ul>
+                            <li>Создать значок на рабочем столе</li>
+                            <li>Добавить действие "Открыть с помощью Code" в контекстное меню проводника Windows для файлов</li>
+                            <li>Добавить действие "Открыть с помощью Code" в контекстное меню проводника Windows для каталогов</li>
+                        </ul>
+                        <div class="important">
+                            Убедитесь, что галочка "Добавить в PATH" уже стоит (обычно она включена по умолчанию). Это очень важно!
+                        </div>
+                        <img class="screenshot-img" src="photo_2026-07-28_17-58-49.jpg" alt="">
+                        <div class="alert info">
+                            скриншот окна "Выбор дополнительных задач"
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <h2>Шаг 4: Установка и завершение</h2>
+                        <p>Нажмите "Далее", а затем "Установить". Дождитесь окончания установки и нажмите "Завершить". VS Code запустится автоматически.</p>
+                        <img class="screenshot-img" src="photo_2026-07-28_17-59-07.jpg" alt="Здесь должен быть скриншот">
+                        <img class="screenshot-img" src="photo_2026-07-28_17-59-38.jpg" alt="Здесь должен быть скриншот">
+                      
+                    </div>
+
+                    <div class="step">
+                        <h2>Шаг 5: Установка расширения Python</h2>
+                        <p>Это самый важный шаг для работы с Python в VS Code.</p>
+                        <ol>
+                            <li>В левой панели VS Code найдите и нажмите на иконку "Расширения" (выглядит как несколько квадратиков).</li>
+                            <li>В строке поиска введите <strong>Python</strong>.</li>
+                            <li>Найдите расширение от Microsoft (оно будет первым в списке) и нажмите кнопку "Установить".</li>
+                        </ol>
+                        <p>После установки этого расширения VS Code будет полностью готов к работе с вашими Python-проектами.</p>
+                        <img class="screenshot-img" src="photo_2026-07-28_17-59-38.jpg" alt="Здесь должен быть скриншот">
+                        <div class="alert info">
+                            скриншот окна VS Code с открытой вкладкой "Расширения", поиском "Python" и выделенным расширением от Microsoft.
+                        </div>
+                    </div>
+                </section>
+                
+                <h2>Поздравляем!</h2>
+                <p>Теперь у вас есть все необходимые инструменты для начала программирования на Python!</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
