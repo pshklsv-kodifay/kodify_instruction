@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Локальный сервер Minecraft 1.11.2 для Python</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <a class="header-logo-link" href="https://kodify.online/">
+            <img src="photo.png" alt="Kodify" class="header-logo">
+        </a>
+        <nav class="header-nav">
+            <a href="https://kodify.online/#rec2491400261">Курсы</a>
+            <a href="https://kodify.online/#rec2488766391">Преподаватели</a>
+            <a href="https://kodify.online/#rec2494123921">Отзывы</a>
+            <a href="https://kodify.online/pay">Оплата</a>
+        </nav>
+        <a class="header-cta" href="https://kodify.online/">Записаться на обучение</a>
+    </header>
+
+    <div class="main-layout">
+        <nav class="side-menu">
+            <h3>Навигация</h3>
+            <ul>
+                <li><a href="index.html">На главную</a></li>
+                <li><a href="#versions">Что нужно</a></li>
+                <li><a href="#step-1">Шаг 1: Minecraft</a></li>
+                <li><a href="#step-2">Шаг 2: Сервер</a></li>
+                <li><a href="#step-3">Шаг 3: Проверка входа</a></li>
+                <li><a href="#step-4">Шаг 4: Python</a></li>
+                <li><a href="#step-5">Шаг 5: VS Code</a></li>
+                <li><a href="#step-6">Шаг 6: Библиотеки</a></li>
+            </ul>
+        </nav>
+
+        <main class="content with-side-menu">
+            <div class="container">
+                <h1 id="top">Локальный сервер Minecraft 1.11.2 для Python</h1>
+                <p>Эта инструкция нужна, чтобы запустить готовый сервер и управлять миром из Python через библиотеки <strong>mcpi</strong> и <strong>minecraftstuff</strong>. Сервер заново собирать не нужно: папка уже готова.</p>
+
+                <section class="step" id="versions">
+                    <h2>Что нужно для занятий Python Minecraft</h2>
+                    <div class="important">
+                        <p>Minecraft, локальный сервер, Python, VS Code и библиотеки <strong>mcpi</strong>.</p>
+                        <p>Ниже инструкция по установке.</p>
+                    </div>
+                </section>
+
+                <section class="step">
+                    <h2 id="step-1">Шаг 1: Установите Minecraft 1.11.2</h2>
+                    <p>Клиент игры ставится через TLauncher: <a href="https://tlauncher.ru/" target="_blank">https://tlauncher.ru/</a></p>
+                    <p>Нажмите <strong>«Скачать TLauncher»</strong>, выберите свою операционную систему и нажмите зелёную кнопку. Скачается установочный файл.</p>
+                    <div class="screenshot-flex-container">
+                        <img class="screenshot-img photo" src="скриншоты tlauncher/01-skachat.png" alt="Кнопка Скачать TLauncher на сайте">
+                        <img class="screenshot-img photo" src="скриншоты tlauncher/02-windows.png" alt="Выбор Windows и зелёная кнопка скачивания">
+                    </div>
+                    <p>Запустите скачанный файл и на каждом окне нажимайте <strong>«Продолжить»</strong>. В лицензии отметьте «Я принимаю условия лицензионного соглашения».</p>
+                    <img class="screenshot-img photo" src="скриншоты tlauncher/03-privetstvie.png" alt="Окно приветствия установщика TLauncher">
+                    <img class="screenshot-img photo" src="скриншоты tlauncher/04-licenziya.png" alt="Лицензионное соглашение TLauncher">
+                    <img class="screenshot-img photo" src="скриншоты tlauncher/05-gotovo.png" alt="Окно Всё готово к установке">
+                    <img class="screenshot-img photo" src="скриншоты tlauncher/06-zadachi.png" alt="Дополнительные задачи установщика TLauncher">
+                    <p>Запустите TLauncher. Если Windows спросит про брандмауэр, нажмите <strong>«Разрешить доступ»</strong>.</p>
+                    <img class="screenshot-img photo" src="скриншоты tlauncher/07-razreshit.png" alt="Окно брандмауэра, кнопка Разрешить доступ">
+                    <p>Придумайте короткий логин и введите его в поле слева внизу. Слишком длинное имя вводить нельзя: не больше 16 символов.</p>
+                    <img class="screenshot-img photo" src="скриншоты tlauncher/08-login.png" alt="Поле логина в TLauncher">
+                    <p>В списке версий выберите <strong>1.11.2</strong>. На скрине это три строки: <strong>OptiFine 1.11.2</strong>, <strong>ForgeOptiFine 1.11.2</strong> или <strong>Forge 1.11.2</strong>. Подойдёт любая из них.</p>
+                    <img class="screenshot-img photo" src="скриншоты tlauncher/09-versii.png" alt="Список версий OptiFine, ForgeOptiFine и Forge 1.11.2">
+                    <p>Нажмите жёлтую кнопку <strong>«Установить»</strong>. Начнётся загрузка игры, дождитесь окончания.</p>
+                    <img class="screenshot-img photo" src="скриншоты tlauncher/10-ustanovit.png" alt="Кнопка Установить и выбранная версия ForgeOptiFine 1.11.2">
+                    <img class="screenshot-img photo" src="скриншоты tlauncher/11-process.png" alt="Процесс установки Minecraft в TLauncher">
+                    <p>Когда установка закончится, появится окно «Установи свой скин!». Поставьте галочку <strong>«Не показывать больше данное уведомление»</strong> и нажмите <strong>«ОК»</strong>.</p>
+                    <img class="screenshot-img photo" src="скриншоты tlauncher/12-uvedomlenie.png" alt="Уведомление про скин, галочка и кнопка ОК">
+                    <div class="important">
+                        В лаунчере должна быть выбрана версия <strong>1.11.2</strong>: OptiFine, ForgeOptiFine или Forge.
+                    </div>
+                </section>
+
+                <section class="step">
+                    <h2 id="step-2">Шаг 2: Установите сервер</h2>
+                    <p>Откройте папку на Google Диске и скачайте архив <code>server.zip</code>. Собирать сервер заново не нужно.</p>
+                    <a href="https://drive.google.com/drive/folders/14rva6eY__MMYhHw2rI1RBdVZXtPNBF1D?usp=sharing" class="button-link" target="_blank" style="background-color:#4CAF50; color:white; padding:15px 30px; text-decoration:none; display:inline-block; border-radius:5px;">ССЫЛКА НА ГУГЛ ДИСК</a>
+                    <p>Нажмите <strong>«Скачать»</strong> справа от файла <code>server.zip</code>.</p>
+                    <img class="screenshot-img photo" src="скриншоты server/08-skachat-zip.png" alt="Кнопка Скачать у файла server.zip">
+                    <p>Если появится окно «Не удалось проверить файл на наличие вирусов», нажмите <strong>«Всё равно скачать»</strong>. Предупреждение появляется из‑за размера архива.</p>
+                    <img class="screenshot-img photo" src="скриншоты server/09-vse-ravno.png" alt="Кнопка Всё равно скачать">
+                    <p>Откройте скачанный архив и перетащите папку <code>server</code> из него на рабочий стол.</p>
+                    <img class="screenshot-img photo" src="скриншоты server/10-na-stol.png" alt="Папка server внутри архива, перенос на рабочий стол">
+                    <p>Внутри уже лежит:</p>
+                    <ul>
+                        <li><code>start.bat</code> — запуск сервера;</li>
+                        <li><code>spigot-1.11.2.jar</code> — сам сервер Minecraft 1.11.2;</li>
+                        <li><code>plugins</code> — плагин, через который Python потом подключится к игре;</li>
+                        <li><code>runtime</code> — Java 8.</li>
+                    </ul>
+                    <div class="important">
+                        Java отдельно скачивать не нужно: она уже лежит в папке <code>runtime</code>. Запускать сервер нужно файлом <code>start.bat</code> на следующем шаге.
+                    </div>
+                </section>
+
+                <section class="step">
+                    <h2 id="step-3">Шаг 3: Проверка — зайдите на сервер</h2>
+                    <p>Откройте папку <code>server</code> и запустите файл <code>start.bat</code>.</p>
+                    <img class="screenshot-img photo" src="скриншоты server/01-start-bat.png" alt="Файл start.bat в папке server">
+                    <p>Подождите около 10 секунд, пока прогрузится чёрное окно сервера. Строка <code>Done</code> в конце означает, что сервер работает.</p>
+                    <img class="screenshot-img photo" src="скриншоты server/02-done.png" alt="Окно сервера со строкой Done">
+                    <div class="important">
+                        Пока вы работаете в Minecraft, чёрное окно сервера не закрывайте. Если его закрыть, сервер сразу остановится и игра отключится. Выключайте его только когда закончили: закройте окно или напишите в нём <code>stop</code> и нажмите Enter.
+                    </div>
+                    <p>В главном меню Minecraft нажмите <strong>«Сетевая игра»</strong>.</p>
+                    <img class="screenshot-img photo" src="скриншоты server/03-setevaya.png" alt="Кнопка Сетевая игра в главном меню">
+                    <p>Нажмите <strong>«Добавить»</strong>.</p>
+                    <img class="screenshot-img photo" src="скриншоты server/04-dobavit.png" alt="Кнопка Добавить в списке серверов">
+                    <p>В поле «Адрес сервера» напишите <code>localhost</code> и нажмите <strong>«Готово»</strong>.</p>
+                    <img class="screenshot-img photo" src="скриншоты server/05-localhost.png" alt="Адрес localhost и кнопка Готово">
+                    <p>В списке появится сервер. Нажмите на него, затем нажмите <strong>«Подключиться»</strong>.</p>
+                    <img class="screenshot-img photo" src="скриншоты server/06-podkluchitsya.png" alt="Выбор сервера и кнопка Подключиться">
+                    <p>Если всё сделано верно, вы окажетесь в обычном мире: холмы, деревья, вода. В чате будет сообщение, что ваш ник зашёл в игру.</p>
+                    <img class="screenshot-img photo" src="скриншоты server/07-mir.png" alt="Игрок в плоском мире на сервере">
+                </section>
+
+                <section class="step">
+                    <h2 id="step-4">Шаг 4: Установите Python</h2>
+                    <p>Скачайте Python с главной страницы сайта. Если Python уже установлен, этот шаг можно пропустить.</p>
+                    <p>Откройте <a href="https://www.python.org" target="_blank">python.org</a> и нажмите кнопку загрузки для Windows. В меню сайта этот пункт называется Downloads.</p>
+                    <img class="screenshot-img photo" src="Скриншот 28-07-2026 155137.jpg" alt="Главная страница сайта Python.org">
+                    <img class="screenshot-img photo" src="Скриншот 28-07-2026 160043.jpg" alt="Меню Downloads и кнопка скачивания Python">
+                    <div class="important">
+                        В первом окне установщика поставьте галочку <strong>Add Python to PATH</strong>, затем нажмите Install Now.
+                    </div>
+                    <div class="screenshot-flex-container">
+                        <img class="screenshot-img photo" src="Скриншот 28-07-2026 160504.jpg" alt="Окно установщика Python">
+                        <img class="screenshot-img photo" src="Скриншот 28-07-2026 160828.jpg" alt="Галочка Add Python to PATH">
+                    </div>
+                    <img class="screenshot-img photo" src="Скриншот 28-07-2026 164705.jpg" alt="Кнопка Install Now">
+                    <p>Дождитесь окончания установки. Когда появится надпись Setup was successful, нажмите Close.</p>
+                    <img class="screenshot-img photo" src="Скриншот 28-07-2026 165137.jpg" alt="Процесс установки Python">
+                    <img class="screenshot-img photo" src="Скриншот 28-07-2026 170950.jpg" alt="Установка Python завершена">
+                    <p>Проверка: откройте командную строку, введите <code>python --version</code> и нажмите Enter. Должна появиться версия Python 3, например <code>Python 3.14.x</code>.</p>
+                    <img class="screenshot-img photo" src="Скриншот 28-07-2026 171140.jpg" alt="Проверка версии Python в командной строке">
+                </section>
+
+                <section class="step">
+                    <h2 id="step-5">Шаг 5: Установите VS Code</h2>
+                    <p>Visual Studio Code — редактор, в котором пишут программы на Python. Скачайте его с сайта <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a> и нажмите синюю кнопку загрузки для Windows.</p>
+                    <img class="screenshot-img photo" src="Скриншот 28-07-2026 171532.jpg" alt="Сайт Visual Studio Code">
+                    <img class="screenshot-img photo" src="Скриншот 28-07-2026 172341.jpg" alt="Выбор версии VS Code для Windows">
+                    <p>Запустите скачанный файл. Примите лицензионное соглашение и нажмите «Далее».</p>
+                    <img class="screenshot-img photo" src="photo_2026-07-28_17-57-47.jpg" alt="Лицензионное соглашение VS Code">
+                    <p>В окне дополнительных задач отметьте значок на рабочем столе и пункты «Открыть с помощью Code». Галочка «Добавить в PATH» должна стоять. Затем нажмите «Далее» и «Установить». Когда установка закончится, нажмите «Завершить».</p>
+                    <img class="screenshot-img photo" src="photo_2026-07-28_17-58-49.jpg" alt="Дополнительные задачи установщика VS Code">
+                    <img class="screenshot-img photo" src="photo_2026-07-28_17-59-07.jpg" alt="Установка VS Code">
+                    <img class="screenshot-img photo" src="photo_2026-07-28_17-59-38.jpg" alt="Завершение установки VS Code">
+                    <p>В VS Code откройте вкладку «Расширения», найдите <strong>Python</strong> от Microsoft и нажмите «Установить».</p>
+                </section>
+
+                <section class="step">
+                    <h2 id="step-6">Шаг 6: Установите библиотеки Python</h2>
+                    <p>Откройте VS Code. В левом нижнем углу нажмите треугольник, чтобы открыть консоль.</p>
+                    <img class="screenshot-img photo" src="скриншоты server/11-konsol.png" alt="Треугольник в левом нижнем углу VS Code, который открывает консоль">
+                    <p>Вверху панели выберите вкладку <strong>Terminal</strong>.</p>
+                    <img class="screenshot-img photo" src="скриншоты server/12-terminal.png" alt="Вкладка Terminal в VS Code">
+                    <p>Вставьте команду <code>pip install mcpi minecraftstuff</code> и нажмите Enter.</p>
+                    <img class="screenshot-img photo" src="скриншоты server/13-pip.png" alt="Команда pip install mcpi minecraftstuff в терминале">
+                    <p>Дождитесь строки <code>Successfully installed mcpi minecraftstuff</code>. Эти две библиотеки бесплатные.</p>
+                    <img class="screenshot-img photo" src="скриншоты server/14-pip-ok.png" alt="Сообщение об успешной установке библиотек">
+                </section>
+
+                <p style="text-align: center; margin-top: 50px; font-size: 0.9em; color: #777;">Инструкция создана для образовательных целей.</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
