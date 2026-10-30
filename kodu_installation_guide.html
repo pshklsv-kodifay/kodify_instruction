@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инструкция по установке Kodu Game Lab</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <a class="header-logo-link" href="https://kodify.online/">
+            <img src="photo.png" alt="Kodify" class="header-logo">
+        </a>
+        <nav class="header-nav">
+            <a href="https://kodify.online/#rec2491400261">Курсы</a>
+            <a href="https://kodify.online/#rec2488766391">Преподаватели</a>
+            <a href="https://kodify.online/#rec2494123921">Отзывы</a>
+            <a href="https://kodify.online/pay">Оплата</a>
+        </nav>
+        <a class="header-cta" href="https://kodify.online/">Записаться на обучение</a>
+    </header>
+
+    <div class="main-layout">
+        <nav class="side-menu">
+            <h3>Навигация</h3>
+            <ul>
+                <li><a href="index.html">На главную</a></li>
+                <li><a href="#step-1">Шаг 1: Сайт</a></li>
+                <li><a href="#step-2">Шаг 2: Скачивание</a></li>
+                <li><a href="#step-3">Шаг 3: Файл</a></li>
+                <li><a href="#step-4">Шаг 4: Установка</a></li>
+                <li><a href="#step-5">Шаг 5: Запуск</a></li>
+                <li><a href="#step-6">Шаг 6: Вход</a></li>
+            </ul>
+        </nav>
+
+        <main class="content with-side-menu">
+            <div class="container">
+                <h1 id="top">Инструкция по установке Kodu Game Lab</h1>
+                <p>Kodu Game Lab — бесплатная программа для создания 3D-игр. В ней персонажи программируются цветными блоками, а не текстом кода. Программа работает на Windows, ключ активации не нужен.</p>
+
+                <div class="important">
+                    Kodu ставится только на Windows: 11, 10, 8 или 7. На macOS и Android официальной версии нет. Нужна видеокарта с поддержкой DirectX 9.0c. Библиотека XNA 4.0 уже входит в файл <code>KoduSetup.EXE</code>, отдельно её скачивать не нужно.
+                </div>
+
+                <section class="step">
+                    <h2 id="step-1">Шаг 1. Откройте страницу загрузки</h2>
+                    <p>Откройте браузер и перейдите на официальную страницу загрузок Kodu:</p>
+                    <p><a href="https://www.kodugamelab.com/downloads/" target="_blank">https://www.kodugamelab.com/downloads/</a></p>
+                    <p>Сверху будет баннер <strong>Kodu Game Lab</strong>. Ниже на странице — ссылки на установщик.</p>
+                    <img class="screenshot-img photo" src="скриншоты kodu/01-site.png" alt="Официальная страница загрузок Kodu Game Lab">
+                </section>
+
+                <section class="step">
+                    <h2 id="step-2">Шаг 2. Скачайте KoduSetup.EXE</h2>
+                    <p>Пролистайте страницу до заголовка <strong>Latest Version : 1.6.18.0</strong>. Нажмите ссылку <strong>KoduSetup.EXE</strong>. Браузер начнёт скачивать установочный файл.</p>
+                    <img class="screenshot-img photo" src="скриншоты kodu/02-download.png" alt="Ссылки KoduSetup.EXE и KoduSetup.MSI на странице загрузок">
+                    <div class="alert info">
+                        Скачивайте именно <strong>KoduSetup.EXE</strong>. Файл <strong>KoduSetup.MSI</strong> нужен системным администраторам для установки сразу на много компьютеров. Для дома и занятий достаточно EXE: в нём уже есть всё необходимое, включая XNA 4.0.
+                    </div>
+                </section>
+
+                <section class="step">
+                    <h2 id="step-3">Шаг 3. Найдите файл в папке «Загрузки»</h2>
+                    <p>Откройте папку <strong>Загрузки</strong>. В ней появится файл <code>KoduSetup_1.6.18.0.exe</code> с иконкой компьютера и диска. Дважды щёлкните по нему, чтобы запустить установку.</p>
+                    <img class="screenshot-img photo" src="скриншоты kodu/03-installer-file.png" alt="Файл KoduSetup_1.6.18.0.exe в папке Загрузки">
+                </section>
+
+                <section class="step">
+                    <h2 id="step-4">Шаг 4. Установите программу</h2>
+                    <p>Windows спросит, разрешаете ли вы приложению вносить изменения на компьютере. Нажмите <strong>«Да»</strong>.</p>
+                    <p>Первым появится окно <strong>«Выберите язык установки»</strong>. Оставьте <strong>Русский</strong> и нажмите <strong>ОК</strong>.</p>
+                    <img class="screenshot-img photo dialog" src="скриншоты kodu/04-language-dialog.png" alt="Окно выбора языка установки Kodu, выбран Русский">
+                    <p>Следующее окно — <strong>лицензионное соглашение</strong>. Оставьте точку у пункта <strong>«Я принимаю условия соглашения»</strong> и нажмите <strong>«Далее»</strong>.</p>
+                    <img class="screenshot-img photo dialog" src="скриншоты kodu/04-license-dialog.png" alt="Лицензионное соглашение Kodu Game Lab, выбран пункт Я принимаю условия соглашения">
+                    <p>Дальше мастер спросит папку установки. Оставьте путь <code>C:\Program Files (x86)\Microsoft Research\Kodu Game Lab</code> и нажмите <strong>«Далее»</strong>.</p>
+                    <img class="screenshot-img photo dialog" src="скриншоты kodu/04-folder-dialog.png" alt="Окно выбора папки установки Kodu Game Lab">
+                    <p>Затем появится окно <strong>«Выберите дополнительные задачи»</strong>. Оставьте галочки включёнными: так на рабочем столе появится ярлык Kodu. Нажмите <strong>«Далее»</strong>.</p>
+                    <img class="screenshot-img photo dialog" src="скриншоты kodu/04-tasks-dialog.png" alt="Окно дополнительных задач установки Kodu: ярлык, обновления, сведения для Microsoft">
+                    <p>После этого нажмите <strong>«Установить»</strong>. Дождитесь копирования файлов и в конце нажмите <strong>«Готово»</strong>.</p>
+                    <div class="important">
+                        Если Windows SmartScreen напишет, что приложение неизвестно, нажмите <strong>«Подробнее»</strong>, затем <strong>«Выполнить в любом случае»</strong>. Это официальный установщик с сайта kodugamelab.com.
+                    </div>
+                </section>
+
+                <section class="step">
+                    <h2 id="step-5">Шаг 5. Запустите Kodu</h2>
+                    <p>Откройте меню <strong>Пуск</strong> и начните печатать <code>Kodu</code>. В списке появится <strong>Kodu Game Lab</strong> — запустите его.</p>
+                    <p>Сначала на экране появится персонаж Kodu: программа загружается, нужно подождать несколько секунд.</p>
+                    <img class="screenshot-img photo" src="скриншоты kodu/04-splash.png" alt="Загрузочный экран Kodu Game Lab">
+                </section>
+
+                <section class="step">
+                    <h2 id="step-6">Шаг 6. Войдите как Guest</h2>
+                    <p>Откроется окно <strong>Sign In</strong>. В поле <strong>Creator</strong> уже стоит имя <code>Guest</code>, в поле <strong>Pin</strong> — код <code>0000</code>. Это гостевой вход, регистрироваться не нужно. Нажмите <strong>OK</strong>.</p>
+                    <img class="screenshot-img photo" src="скриншоты kodu/05-signin.png" alt="Окно входа Sign In с именем Guest и кодом 0000">
+                    <p>После входа откроется главное меню. Справа будет персонаж Kodu, слева — новости, по центру список команд: <strong>NEW WORLD</strong> (новый мир), <strong>ЗАГРУЗИТЬ МИР</strong>, <strong>ПАРАМЕТРЫ</strong> и другие. Установка закончена, можно начинать занятие.</p>
+                    <img class="screenshot-img photo" src="скриншоты kodu/06-main.png" alt="Главное меню Kodu Game Lab после входа">
+                    <div class="alert info">
+                        Язык меню меняется в пункте <strong>ПАРАМЕТРЫ</strong> (Options): найдите плитку <strong>Language</strong> и выберите русский. После смены языка программу нужно закрыть и открыть снова.
+                    </div>
+                </section>
+
+                <p style="text-align: center; margin-top: 50px; font-size: 0.9em; color: #777;">Инструкция создана для образовательных целей.</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -238,6 +238,13 @@ p {
     content: none;
 }
 
+.screenshot-img.photo.dialog {
+    width: auto;
+    max-width: min(480px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .screenshot-flex-container .screenshot-img.photo {
     max-width: none;
     width: calc(50% - 10px);
